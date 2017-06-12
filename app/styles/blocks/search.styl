@@ -1,0 +1,42 @@
+.search
+  max-width 890px
+  width 100%
+  background-color $white
+  border-radius 3px
+
+  &--sm
+    .search
+      &__input
+      &__btn
+        height 40px
+
+      &__input
+        border-color $pomegranate
+        padding 0 10px
+
+      &__btn
+        width 40px
+        border-radius 0 3px 3px 0
+        background-image url("../img/search/icon-search.png")
+        background-position 50%
+        background-repeat no-repeat
+
+  &__form
+    display flex
+    justify-content center
+
+  &__input
+    box-sizing border-box
+    max-width 750px
+    width 100%
+    padding 0 30px
+    height 50px
+    font-size 0.8125rem
+    border 1px solid $gallery
+    border-radius 3px 0 0 3px
+
+  &__btn
+    max-width 140px
+    width 100%
+    padding-left 30px
+    background $pomegranate url("../img/search/icon-search.png") 30px 50% no-repeat

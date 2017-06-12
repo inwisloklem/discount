@@ -1,0 +1,25 @@
+.menu
+  margin 0 45px
+
+  &__list
+    display flex
+    align-items center
+    justify-content space-between
+    min-width 480px
+
+  &__item
+    font-size 1.0625rem
+
+    &--current
+      border-bottom 2px solid $pomegranate
+      color $pomegranate
+  
+  &__link
+    display block
+    padding 30px 15px
+    color inherit
+    text-decoration none
+    transition()
+
+    &:hover
+      color $pomegranate

@@ -1,0 +1,7 @@
+.DS_Store
+app/*.html
+css/*.css
+dist/*
+!dist/.gitkeep
+node_modules/
+yarn.lock

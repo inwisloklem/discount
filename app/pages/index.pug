@@ -1,0 +1,305 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/symbols.pug
+
+    header
+      section.discount
+        section.logotype.discount__logotype
+          .logotype__image
+            img(
+              src = "img/logotype/image-logotype.png",
+              width = 197, height = 65,
+              alt = "Распродажа. Покупки с выгодой"
+            )
+
+        nav.menu.discount__menu
+          ul.menu__list
+            li.menu__item.menu__item--current
+              a.menu__link Акции
+            li.menu__item
+              a.menu__link(href = "#") Товары со скидкой
+            li.menu__item
+              a.menu__link(href = "#") Бренды
+            li.menu__item
+              a.menu__link(href = "#") Шоппинг
+
+        section.search.search--sm.discount__search
+          form.search__form
+            input.search__input(
+              type = "text",
+              name = "search",
+              placeholder = "Введите название бренда, товара ...",
+              required
+            )
+            button.btn.btn--accent.search__btn(type = "submit")
+
+        section.user
+          a.user__link(href = "#")
+            | Москва
+            svg.user__icon(width = 12, height = 12)
+              use(xlink:href = "#icon-arrow")
+          button.btn.btn.btn--accent.user__btn Мои скидки
+
+      section.categories
+        .categories__wrapper
+          ul.categories__list
+            li.categories__item
+              a.categories__link(href = "#") Одежда и обувь
+            li.categories__item
+              a.categories__link(href = "#") Детям и мамам
+            li.categories__item
+              a.categories__link(href = "#") Спорт и фитнес
+            li.categories__item
+              a.categories__link(href = "#") Техника и электроника
+            li.categories__item
+              a.categories__link(href = "#") Дом и сад
+            li.categories__item
+              a.categories__link(href = "#") Путешествия и туризм
+            li.categories__item
+              a.categories__link(href = "#") Досуг и равлечения
+            li.categories__item
+              a.categories__link(href = "#")
+                | Ещё
+                svg.categories__icon(width = 15, height = 15)
+                  use(xlink:href = "#icon-arrow")
+
+      section.promo
+        .promo__wrapper
+          .promo__line
+            h2.promo__title Лучшие распродажи, скидки и купоны
+          .promo__line
+            h2.promo__title на товары в Москве
+
+          section.search.promo__search
+            form.search__form
+              input.search__input(
+                type = "text",
+                name = "search",
+                placeholder = "Введите название бренда, товара ...",
+                required
+              )
+              button.btn.btn.btn--accent.search__btn(type = "submit") Поиск
+
+      main
+        section.features
+          h2.features__title Почему мы лучшие
+
+          ul.features__list
+            li.features__item
+              figure.features__image
+                img(src = "img/features/1.png",
+                  width = 158,
+                  height = 141,
+                  alt = "Максимальная выгода"
+                )
+              h3.features__item-title Максимальная выгода
+              p.features__item-text.
+                Мы собираем все самые выгодные предложения и скидки в одном месте специально для вас
+            li.features__item
+              figure.features__image
+                img(src = "img/features/2.png",
+                  width = 151,
+                  height = 138,
+                  alt = "Удобный инструмент"
+                )
+              h3.features__item-title Удобный инструмент
+              p.features__item-text.
+                Удобный инструмент позволит найти нужное предложение в считаные секунды
+            li.features__item
+              figure.features__image
+                img(src = "img/features/3.png",
+                  width = 167,
+                  height = 138,
+                  alt = "Будь первым"
+                )
+              h3.features__item-title Будь первым
+              p.features__item-text.
+                Гибкая настройка подписки позволяет экономить время и быть в курсе самых новых и выгодных предложениях
+
+        hr.divider
+
+        section.brands
+          h2.brands__title Лучшие бренды
+
+          ul.brands__list
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/1.jpg",
+                  width = 142,
+                  height = 43,
+                  alt = "Ecco"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/2.jpg",
+                  width = 134,
+                  height = 32,
+                  alt = "Lamoda"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/3.jpg",
+                  width = 127,
+                  height = 28,
+                  alt = "Bershka"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/4.jpg",
+                  width = 124,
+                  height = 84,
+                  alt = "Bally"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/5.jpg",
+                  width = 123,
+                  height = 70,
+                  alt = "Ralf Ringer"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/6.jpg",
+                  width = 171,
+                  height = 52,
+                  alt = "Soda Firenze"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/7.jpg",
+                  width = 158,
+                  height = 42,
+                  alt = "Fashion House"
+                )
+            li.brands__item
+              figure.brands__image
+                img(src = "img/brands/8.jpg",
+                  width = 151,
+                  height = 75,
+                  alt = "Puma"
+                )
+
+          button.btn.btn--normal.brands__btn(type = "button") Показать ещё
+
+        section.events
+          h2.events__title Популярные акции
+
+          ul.events__list
+            li.events__item
+              .events__block.events__block--bg-1
+                .events__discount -15%
+                figure.events__image
+                  img(src = "img/events/1.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Ecco"
+                  )
+              .events__text.
+                Скидка 15% при покупке от 1 000 рублей
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-2
+                .events__discount -10%
+                figure.events__image
+                  img(src = "img/events/2.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Lamoda"
+                  )
+              .events__text.
+                Скидка 10% при покупке от 1 000 рублей
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-3
+                .events__discount 1000&#8381;
+                figure.events__image
+                  img(src = "img/events/3.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Soda Firenze"
+                  )
+              .events__text.
+                Дарим 1 000 рублей за подписку
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-2
+                .events__discount -10%
+                figure.events__image
+                  img(src = "img/events/2.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Lamoda"
+                  )
+              .events__text.
+                Скидка 10% при покупке от 1 000 рублей
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-4
+                .events__discount -15%
+                figure.events__image
+                  img(src = "img/events/4.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Bershka"
+                  )
+              .events__text.
+                Скидка 15% при покупке от 1 000 рублей
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-5
+                .events__discount -10%
+                figure.events__image
+                  img(src = "img/events/5.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Ralf Ringer"
+                  )
+              .events__text.
+                Скидка 10% при покупке от 1 000 рублей
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-6
+                .events__discount 1000&#8381;
+                figure.events__image
+                  img(src = "img/events/6.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Mvideo"
+                  )
+              .events__text.
+                Дарим 1 000 рублей за подписку
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.events__btn(href = "#") Подробнее
+            li.events__item
+              .events__block.events__block--bg-5
+                .events__discount -15%
+                figure.events__image
+                  img(src = "img/events/5.jpg",
+                    width = 120,
+                    height = 120,
+                    alt = "Ralf Ringer"
+                  )
+              .events__text.
+                Скидка 10% при покупке от 1 000 рублей
+              .events__buttons
+                button.btn.btn--like.events__btn(type = "button") +30
+                a.btn.btn--more.btn--more.events__btn(href = "#") Подробнее
+
+          button.btn.btn--normal.events__btn(type = "button") Показать ещё
